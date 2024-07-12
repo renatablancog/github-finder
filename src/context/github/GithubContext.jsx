@@ -23,9 +23,9 @@ export const GithubProvider = ({ children }) => {
   };
 
   return (
-    <GithubProvider value={{ users, loader, fetchUsers }}>
+    <GithubContext.Provider value={{ users, loader, fetchUsers }}>
       {children}
-    </GithubProvider>
+    </GithubContext.Provider>
   );
 };
 
