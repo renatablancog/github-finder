@@ -1,14 +1,11 @@
 import React from 'react';
+import UserResults from '../users/UserResults';
 
 const Home = () => {
   return (
     <>
-      <h1 className='text-6xl mb-4'>Github Finder 🔍</h1>
-      <p className='mb-4 text-2xl font-light'>
-        A React App to search Github profiles and see the details of them. This
-        App is part of the course of Traversy Media with some modified features
-        by @renatablancog.
-      </p>
+      <h1 className='hero font-bold text-2xl text-primary-content'>Users</h1>
+      <UserResults />
     </>
   );
 };
