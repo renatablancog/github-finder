@@ -5,7 +5,7 @@ import GithubContext from '../../context/github/GithubContext';
 function UserSearchBar() {
   const [text, setText] = useState('');
 
-  const { users } = useContext(GithubContext);
+  const { users, searchUsers, clearUsers } = useContext(GithubContext);
 
   const handleChange = (e) => {
     setText(e.target.value);
@@ -17,7 +17,7 @@ function UserSearchBar() {
     if (text === '') {
       alert('Please enter something');
     } else {
-      //"todo- search users"
+      searchUsers(text);
       setText('');
     }
   };
@@ -46,8 +46,10 @@ function UserSearchBar() {
       </div>
 
       <div>
-        {UserSearchBar.length > 0 && (
-          <button className='btn btn-ghost btn-lg'>Clear</button>
+        {users.length > 0 && (
+          <button className='btn btn-ghost btn-lg' onClick={clearUsers}>
+            Clear
+          </button>
         )}
       </div>
     </div>
