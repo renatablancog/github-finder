@@ -1,6 +1,6 @@
 import React from 'react';
 import { createContext, useReducer } from 'react';
-import githubReducer from '../GithubReducer';
+import githubReducer from './GithubReducer';
 
 const GithubContext = createContext();
 const GITHUB_URL = import.meta.env.VITE_APP_GITHUB_URL;

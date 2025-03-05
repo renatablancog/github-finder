@@ -1,10 +1,11 @@
 import React from 'react';
 import UserResults from '../users/UserResults';
+import UserSearchBar from '../users/UserSearchBar';
 
 const Home = () => {
   return (
     <>
-      <h1 className='hero font-bold text-2xl text-primary-content'>Users</h1>
+      <UserSearchBar />
       <UserResults />
     </>
   );
